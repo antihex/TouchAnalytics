@@ -1,19 +1,14 @@
 package com.example.touchanalytics;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.LinkedList;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 
@@ -27,7 +22,7 @@ public class CollectSwipe extends AppCompatActivity{
     ImageView imgView;
     TextView txtView;
 
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {    //Calibration Page
         super.onCreate(savedInstanceState);
         Bundle bundle = getIntent().getExtras();
         this.manager = bundle.getParcelable("manager");
@@ -35,6 +30,7 @@ public class CollectSwipe extends AppCompatActivity{
         swipe = new ConcurrentLinkedQueue<>();
         fullCollect = new ConcurrentLinkedQueue<>();
         imgView = findViewById(R.id.calibrationImgView);
+        imgView.setImageDrawable(ImageSelect.RandomImage(this));
         txtView = findViewById(R.id.swipe_amount);
         txtView.setText(String.format("%d/%d", 0, requiredSwipeLimit));
 
@@ -56,8 +52,8 @@ public class CollectSwipe extends AppCompatActivity{
     }
 
     public boolean dispatchTouchEvent( MotionEvent event ) {
-        // Log.w( MA, "Inside onTouchEvent" );
-        View v = getCurrentFocus();
+        //Log.w( MA, "Inside onTouchEvent" );
+        //View v = getCurrentFocus();
         String userID = manager.userID;
         switch (event.getAction()){
             case MotionEvent.ACTION_DOWN:

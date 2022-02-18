@@ -13,8 +13,8 @@ import java.lang.Math;
 
 public class ImageSelect extends AppCompatActivity {
 
-    private static int numOfImagesEach = 21;
-    private static int numOfTypes = 4;
+    private static final int numOfImagesEach = 21;
+    private static final int numOfTypes = 4;
 
     public static int animalInt;
 
@@ -51,7 +51,6 @@ public class ImageSelect extends AppCompatActivity {
         Log.d("", pathName);
         Resources resources = context.getResources();
         int id = resources.getIdentifier(pathName,"drawable", context.getPackageName());
-
 
         return resources.getDrawable(id, context.getTheme());
 

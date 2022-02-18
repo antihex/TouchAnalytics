@@ -2,21 +2,15 @@ package com.example.touchanalytics;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.GestureDetector;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridLayout;
 
 import java.io.File;
-import java.security.AllPermission;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -70,15 +64,12 @@ public class MainActivity extends AppCompatActivity{
 
 
 
-        calibrateUSRBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent swipeCollect = new Intent(view.getContext(), CollectSwipe.class);
-                Bundle bundle = new Bundle();
-                bundle.putParcelable("manager", dataManager);
-                swipeCollect.putExtras(bundle);
-                startActivity(swipeCollect);
-            }
+        calibrateUSRBtn.setOnClickListener(view -> {
+            Intent swipeCollect = new Intent(view.getContext(), CollectSwipe.class);
+            Bundle bundle = new Bundle();
+            bundle.putParcelable("manager", dataManager);
+            swipeCollect.putExtras(bundle);
+            startActivity(swipeCollect);
         });
 
         int size = display.widthPixels;
@@ -102,16 +93,13 @@ public class MainActivity extends AppCompatActivity{
            gridLayout.addView(btn);
 
            int finalI = i;
-           btn.setOnClickListener(new View.OnClickListener() {
-               @Override
-               public void onClick(View view) {
-                   Intent testSwipe = new Intent(view.getContext(), TestSwipe.class);
-                   Bundle bundle = new Bundle();
-                   dataManager.selectedUserIndex = finalI;
-                   bundle.putParcelable("dataManager", dataManager);
-                   testSwipe.putExtras(bundle);
-                   startActivity(testSwipe);
-               }
+           btn.setOnClickListener(view -> {
+               Intent testSwipe = new Intent(view.getContext(), TestSwipe.class);
+               Bundle bundle = new Bundle();
+               dataManager.selectedUserIndex = finalI;
+               bundle.putParcelable("dataManager", dataManager);
+               testSwipe.putExtras(bundle);
+               startActivity(testSwipe);
            });
 
        }

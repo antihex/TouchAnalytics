@@ -2,11 +2,6 @@ package com.example.touchanalytics;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.util.Log;
-
-import androidx.annotation.NonNull;
-
-import com.example.touchanalytics.AnalyticDataEntry;
 
 public class AnalyticDataFeatureSet implements java.io.Serializable , Parcelable {
     /*

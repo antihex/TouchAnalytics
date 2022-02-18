@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_drawable">
 
     <ImageView
         android:id="@+id/idIVcourse3"
@@ -32,15 +33,15 @@
 
     <Button
         android:id="@+id/cancelCaliBtn"
-        android:layout_width="137dp"
-        android:layout_height="86dp"
+        android:layout_width="154dp"
+        android:layout_height="73dp"
         android:text="Cancel Calibration"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintHorizontal_bias="0.941"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/idIVcourse3"
-        app:layout_constraintVertical_bias="0.903" />
+        app:layout_constraintVertical_bias="0.975" />
 
     <TextView
         android:id="@+id/swipe_amount"
@@ -53,13 +54,14 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="217dp"
-        android:layout_height="158dp"
+        android:layout_width="239dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="439dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.954"
-        app:srcCompat="@drawable/directions" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/direction" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,11 +3,8 @@ package com.example.touchanalytics;
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.renderscript.ScriptGroup;
 import android.util.Log;
 import android.view.MotionEvent;
-import android.widget.Toast;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,7 +12,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.EventListener;
 import java.util.List;
 
 public class AnalyticDataManager implements Parcelable {
@@ -40,7 +36,7 @@ public class AnalyticDataManager implements Parcelable {
         usersCSVs = allUserCSVIds;
         selectedUserIndex = 0;
         CSVParserThread = new Thread(this::parseCSVFromRaw);
-        CSVParserThread.run();
+        CSVParserThread.start();
     }
 
     public AnalyticDataManager(Context currentContext, File[] allUserCSVFiles){
@@ -48,7 +44,7 @@ public class AnalyticDataManager implements Parcelable {
         usersCSVFiles = allUserCSVFiles;
         selectedUserIndex = 0;
         CSVParserThread = new Thread(this::parseCSVFromDCIMFiles);
-        CSVParserThread.run();
+        CSVParserThread.start();
     }
 
 
@@ -162,13 +158,13 @@ public class AnalyticDataManager implements Parcelable {
                 }
 
             }
-            float invSwipeCount = 1f/((float)trueSwipeCount);
+            //float invSwipeCount = 1f/((float)trueSwipeCount);
             runningUserUpAverage = runningUserUpAverage.scale(1f/((float)numUpSwipes));
             runningUserDownAverage = runningUserDownAverage.scale(1f/((float)numDownSwipes));
             runningUserLeftAverage = runningUserLeftAverage.scale(1f/((float)numLeftSwipes));
             runningUserRightAverage = runningUserRightAverage.scale(1f/((float)numRightSwipes));
 
-            ArrayList<Float> dists = new ArrayList<Float>();
+            ArrayList<Float> dists = new ArrayList<>();
             float largestDist = Float.MIN_VALUE;
             float smallDist = Float.MAX_VALUE;
             br.close();
@@ -307,7 +303,7 @@ public class AnalyticDataManager implements Parcelable {
                 }
 
             }
-            float invSwipeCount = 1f/((float)trueSwipeCount);
+            //float invSwipeCount = 1f/((float)trueSwipeCount);
             if (numUpSwipes > 0)
                 runningUserUpAverage = runningUserUpAverage.scale(1f/((float)numUpSwipes));
             if (numDownSwipes > 0)
@@ -396,7 +392,7 @@ public class AnalyticDataManager implements Parcelable {
             BufferedReader br = new BufferedReader(new InputStreamReader(inStream));
             String currentLine;
             ArrayList<AnalyticDataEntry> swipe = new ArrayList<AnalyticDataEntry>();
-            ArrayList<Float> dists = new ArrayList<Float>();
+            //ArrayList<Float> dists = new ArrayList<Float>();
             List<AnalyticDataFeatureSet> allFeatures = new ArrayList<>();
             while ((currentLine = br.readLine()) != null) {
                 //From CSV:
@@ -506,7 +502,7 @@ public class AnalyticDataManager implements Parcelable {
 
         //Makes sure that all entries being added are from the same user
         for (AnalyticDataEntry dataEntry : usersEntries){
-            if (dataEntry.userId != currUserID){
+            if (!(dataEntry.userId.equals(currUserID))){
                 return false;
             }
         }

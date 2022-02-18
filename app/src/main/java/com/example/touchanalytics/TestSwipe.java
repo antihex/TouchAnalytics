@@ -12,10 +12,6 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class TestSwipe  extends AppCompatActivity {
@@ -53,20 +49,17 @@ public class TestSwipe  extends AppCompatActivity {
 
         Button backBtn = findViewById(R.id.cancelCaliBtn);
         backBtn.setText("End test");
-        backBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                fullCollect.clear();
-                swipe.clear();
-                Intent backToMain = new Intent(view.getContext(), MainActivity.class);
-                startActivity(backToMain);
-            }
+        backBtn.setOnClickListener(view -> {
+            fullCollect.clear();
+            swipe.clear();
+            Intent backToMain = new Intent(view.getContext(), MainActivity.class);
+            startActivity(backToMain);
         });
     }
 
     public boolean dispatchTouchEvent( MotionEvent event ) {
         // Log.w( MA, "Inside onTouchEvent" );
-        View v = getCurrentFocus();
+        //View v = getCurrentFocus();
         //long userID = dataManager.userID;
         String userID = "test";
         switch (event.getAction()){
@@ -118,7 +111,7 @@ public class TestSwipe  extends AppCompatActivity {
                         numOfSwipes = 0;
                         numFail = 0;
                         fullCollect.clear();
-                        fullCollect = new ConcurrentLinkedQueue<AnalyticDataEntry>();
+                        fullCollect = new ConcurrentLinkedQueue<>();
                     }
                     imageView.setImageDrawable(ImageSelect.RandomImage(this));
                 }
