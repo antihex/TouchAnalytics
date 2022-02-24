@@ -36,16 +36,16 @@
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="398dp"
-        android:layout_height="130dp"
+        android:layout_width="357dp"
+        android:layout_height="126dp"
         android:text="You have been detected to be the user for this profile. Would you like to continue to add more data to your profile to make your data more accurate?"
         android:textColor="@color/black"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/no_Success_returnToMain"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout3"
-        app:layout_constraintVertical_bias="0.286" />
+        app:layout_constraintTop_toTopOf="@+id/linearLayout3" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"

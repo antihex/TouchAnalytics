@@ -22,8 +22,9 @@ public class ImageSelect extends AppCompatActivity {
 
         char animalChar;
         int index = (int)(Math.random()*numOfImagesEach) + 1;
-        animalInt = (int) Math.round(Math.random()*numOfTypes);
+        animalInt = (int) Math.round(Math.random()*numOfTypes); //Random Number 0,1,2, or 3
         //String animalStr;
+
 
         if (animalInt == 0)
         {

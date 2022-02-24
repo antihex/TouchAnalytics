@@ -8,22 +8,22 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="383dp"
-        android:layout_height="78dp"
-        android:layout_marginBottom="488dp"
+        android:layout_width="306dp"
+        android:layout_height="70dp"
         android:text="Intruder Detected! We have detected that you are not the user for this profile. "
         android:textColor="@color/black"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/returnAfterFailure"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/idIVcourse2"
-        app:layout_constraintVertical_bias="0.286" />
+        app:layout_constraintTop_toBottomOf="@+id/idIVcourse4"
+        app:layout_constraintVertical_bias="0.506" />
 
     <Button
         android:id="@+id/returnAfterFailure"
-        android:layout_width="360dp"
-        android:layout_height="109dp"
+        android:layout_width="358dp"
+        android:layout_height="105dp"
         android:backgroundTint="@color/button_color"
         android:text="Return to the main page"
         app:layout_constraintBottom_toBottomOf="parent"

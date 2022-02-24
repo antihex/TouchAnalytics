@@ -92,18 +92,19 @@ public class TestSwipe  extends AppCompatActivity {
                     if (!didPass)
                         numFail ++;
                     if (numFail >= requiredSwipeLimit*percentCanFail){
-                        String toastText = "Intruder detected!";
-                        int duration = Toast.LENGTH_SHORT;
-                        Toast toast = Toast.makeText(this, toastText, duration);
-                        toast.show();
+                        //String toastText = "Intruder detected!";
+                        //int duration = Toast.LENGTH_SHORT;
+                        //Toast toast = Toast.makeText(this, toastText, duration);
+                        //toast.show();
 
                         fullCollect.clear();
                         swipe.clear();
-                        Intent backToMain = new Intent(this, MainActivity.class);
-                        startActivity(backToMain);
+                        Intent toIntruderPage = new Intent(this, IntruderPage.class);
+                        startActivity(toIntruderPage);
+
                     } else if (numOfSwipes >= requiredSwipeLimit) {
 
-                        String toastText = "Determined to be same USR!";
+                        /*String toastText = "Determined to be same USR!";
                         int duration = Toast.LENGTH_SHORT;
                         Toast toast = Toast.makeText(this, toastText, duration);
                         toast.show();
@@ -112,6 +113,10 @@ public class TestSwipe  extends AppCompatActivity {
                         numFail = 0;
                         fullCollect.clear();
                         fullCollect = new ConcurrentLinkedQueue<>();
+                        */
+                        Intent toTrueUserPage = new Intent(this, TrueUserPage.class);
+                        startActivity(toTrueUserPage);
+
                     }
                     imageView.setImageDrawable(ImageSelect.RandomImage(this));
                 }

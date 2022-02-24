@@ -21,6 +21,8 @@
         <activity android:name=".CollectSwipe"></activity>
         <activity android:name=".CalibrateUser"></activity>
         <activity android:name=".TestSwipe"></activity>
+        <activity android:name=".IntruderPage"></activity>
+        <activity android:name=".TrueUserPage"></activity>
 
     </application>
 
