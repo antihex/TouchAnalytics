@@ -2,6 +2,7 @@ package com.example.touchanalytics;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity{
     File[] allRegisteredUserFiles;
     DisplayMetrics display;
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,9 +74,17 @@ public class MainActivity extends AppCompatActivity{
             startActivity(swipeCollect);
         });
 
+        Button deleteUSRBtn = findViewById(R.id.deleteUserBtn);
+
+        deleteUSRBtn.setOnClickListener(view -> {
+            //TODO Should a specified user or something
+        });
+
+
+
         int size = display.widthPixels;
         int padding = 20;
-        int btnSize = size/3 - padding*2;
+        int btnSize = size/3 - (padding*2);
         GridLayout gridLayout = findViewById(R.id.idGrid);
 
        for(int i = 0; i < currentNumRegUsers; i++) {
