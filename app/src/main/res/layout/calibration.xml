@@ -49,6 +49,7 @@
         android:layout_height="29dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
+        android:textColor="#616161"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

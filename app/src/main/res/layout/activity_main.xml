@@ -45,7 +45,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/round_button"
-        android:text="-"
+        android:text="@string/deleteUserButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

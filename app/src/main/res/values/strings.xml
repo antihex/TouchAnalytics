@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">TouchAnalytics</string>
+    <string name="trueUserText">You have been detected to be the user for this profile. Would you like to continue to add more data to your profile to make your data more accurate?</string>
+    <string name="intruderText">Intruder Detected! We have detected that you are not the user for this profile. </string>
+    <string name="returnToMain">Return to the main page</string>
+    <string name="confirmBackText">If you confirm to go back, you will be brought to the main page and your collected information will be lost.</string>
+    <string name="confirmBackHeader">Confirm Back</string>
+    <string name="deleteUserButton">-</string>
+
 </resources>
+
