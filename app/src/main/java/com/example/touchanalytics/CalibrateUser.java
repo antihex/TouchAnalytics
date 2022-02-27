@@ -53,32 +53,26 @@ public class CalibrateUser extends AppCompatActivity {
             }
         });
 
-        yesBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (canSave) {
-                    boolean worked = OpenSaveCSV.WriteToCSV(view.getContext(), fullCollect, usrNameEditTxt.getText().toString()); //------ if clicked yes on calibration page, run this
-                    if (worked) {
-                        Intent backToMain = new Intent(view.getContext(), MainActivity.class);
-                        startActivity(backToMain);
-                    }
-                }else{
-
-                    String toastText = "Give valid username, or hit no";
-                    int duration = Toast.LENGTH_SHORT;
-                    Toast toast = Toast.makeText(view.getContext(), toastText, duration);
-                    toast.show();
+        yesBtn.setOnClickListener(view -> {
+            if (canSave) {
+                boolean worked = OpenSaveCSV.WriteToCSV(view.getContext(), fullCollect, usrNameEditTxt.getText().toString()); //------ if clicked yes on calibration page, run this
+                if (worked) {
+                    Intent backToMain = new Intent(view.getContext(), MainActivity.class);
+                    startActivity(backToMain);
                 }
+            }else{
+
+                String toastText = "Give valid username, or hit no";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(view.getContext(), toastText, duration);
+                toast.show();
             }
         });
-        noBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                fullCollect.clear();
-                Intent backToMain = new Intent(view.getContext(), MainActivity.class);
-                startActivity(backToMain);
+        noBtn.setOnClickListener(view -> {
+            fullCollect.clear();
+            Intent backToMain = new Intent(view.getContext(), MainActivity.class);
+            startActivity(backToMain);
 
-            }
         });
 
 

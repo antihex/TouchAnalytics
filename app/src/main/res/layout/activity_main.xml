@@ -7,6 +7,27 @@
     android:background="@drawable/gradient_drawable"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="138dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="10dp"
+        android:text="Delete a User"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/deleteUserBtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="138dp"
+        android:layout_height="26dp"
+        android:text="Add new User"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/calibrateUSRBtn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <GridLayout
         android:id="@+id/idGrid"
         android:layout_width="390dp"
@@ -34,7 +55,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/round_button"
-        android:text="+"
+        android:text="@string/addUserButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

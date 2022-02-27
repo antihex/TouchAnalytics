@@ -56,10 +56,10 @@ public class MainActivity extends AppCompatActivity{
 
 
 
-        Log.d("", "test 1");
+        //Log.d("", "test 1");
         //dataManager = new AnalyticDataManager(this, CSVIds);
         dataManager = new AnalyticDataManager(this, allRegisteredUserFiles);
-        Log.d("", "test 2");
+        //Log.d("", "test 2");
 
 
         Button calibrateUSRBtn = findViewById(R.id.calibrateUSRBtn);

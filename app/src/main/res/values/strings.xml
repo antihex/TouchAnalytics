@@ -6,6 +6,7 @@
     <string name="confirmBackText">If you confirm to go back, you will be brought to the main page and your collected information will be lost.</string>
     <string name="confirmBackHeader">Confirm Back</string>
     <string name="deleteUserButton">-</string>
+    <string name="addUserButton">+</string>
 
 </resources>
 

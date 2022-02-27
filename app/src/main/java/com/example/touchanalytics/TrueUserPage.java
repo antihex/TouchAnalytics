@@ -23,6 +23,7 @@ public class TrueUserPage extends AppCompatActivity {
         Button contBtn = findViewById(R.id.yes_Success);
         contBtn.setText("Yes, I want to continue");
         contBtn.setOnClickListener(view -> {
+            //TODO Make more data thing
             Intent backToMain = new Intent(view.getContext(), MainActivity.class);
             startActivity(backToMain);
         });
