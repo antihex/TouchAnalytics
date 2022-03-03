@@ -117,4 +117,12 @@ public class OpenSaveCSV extends AppCompatActivity {
         }
     }
 
+    public static boolean deleteCSV(Context context, String userID){
+
+        File DCIMDir = context.getExternalFilesDir(Environment.DIRECTORY_DCIM);
+        File dataDCIMDir = new File(DCIMDir, "data");
+        String userFileName = userID + ".csv";
+        File newUserFile = new  File(dataDCIMDir, userFileName);
+        return newUserFile.delete();
+    }
 }

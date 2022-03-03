@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity{
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         display = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(display);
@@ -32,9 +33,14 @@ public class MainActivity extends AppCompatActivity{
         OpenSaveCSV.verifyStoragePermissions(this);
         File DCIMDir = this.getExternalFilesDir(Environment.DIRECTORY_DCIM);
         File dataDCIMDir = new File(DCIMDir, "data");
+
         if (!dataDCIMDir.exists()){
             boolean worked = dataDCIMDir.mkdirs();
-            if (!worked){ Log.d("", "somehow didn't work"); }
+
+            if (!worked){
+                Log.d("", "somehow didn't work");
+            }
+
             Log.d("", "Making DCIM Data path");
         }
         registeredUserSaveDir = dataDCIMDir;
@@ -42,9 +48,6 @@ public class MainActivity extends AppCompatActivity{
         Log.d("", "allRegisteredUserFiles length: " + allRegisteredUserFiles.length);
         setContentView(R.layout.activity_main);
 
-
-        //Intent openCSV = new Intent(this, OpenSaveCSV.class);
-        //startActivity(openCSV);
         CSVIds = new int[]{
                 R.raw.user0,
                 R.raw.user1,
@@ -54,17 +57,10 @@ public class MainActivity extends AppCompatActivity{
                 R.raw.user5
         };
 
-
-
-        //Log.d("", "test 1");
-        //dataManager = new AnalyticDataManager(this, CSVIds);
         dataManager = new AnalyticDataManager(this, allRegisteredUserFiles);
-        //Log.d("", "test 2");
 
 
         Button calibrateUSRBtn = findViewById(R.id.calibrateUSRBtn);
-
-
 
         calibrateUSRBtn.setOnClickListener(view -> {
             Intent swipeCollect = new Intent(view.getContext(), CollectSwipe.class);
@@ -77,7 +73,8 @@ public class MainActivity extends AppCompatActivity{
         Button deleteUSRBtn = findViewById(R.id.deleteUserBtn);
 
         deleteUSRBtn.setOnClickListener(view -> {
-            //TODO Should a specified user or something
+
+            //TODO Should delete a specified user or something
         });
 
 
