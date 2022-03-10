@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/idIVcourse3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
         android:layout_gravity="center"
         android:src="@mipmap/ic_launcher"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,11 +21,11 @@
 
     <ImageView
         android:id="@+id/calibrationImgView"
-        android:layout_width="409dp"
-        android:layout_height="491dp"
+        android:layout_width="410sp"
+        android:layout_height="500sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/idIVcourse3"
         app:layout_constraintVertical_bias="0.187"
@@ -33,8 +33,8 @@
 
     <Button
         android:id="@+id/cancelCaliBtn"
-        android:layout_width="154dp"
-        android:layout_height="73dp"
+        android:layout_width="150sp"
+        android:layout_height="75sp"
         android:text="Cancel Calibration"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,9 +45,10 @@
 
     <TextView
         android:id="@+id/swipe_amount"
-        android:layout_width="87dp"
-        android:layout_height="29dp"
+        android:layout_width="100sp"
+        android:layout_height="30sp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:text="TextView"
         android:textColor="#616161"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,8 +56,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="239dp"
-        android:layout_height="230dp"
+        android:layout_width="250sp"
+        android:layout_height="250sp"
         android:layout_marginTop="439dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

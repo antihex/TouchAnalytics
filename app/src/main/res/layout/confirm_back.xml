@@ -18,12 +18,12 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.139" />
+        app:layout_constraintVertical_bias="0.148" />
 
     <ImageView
         android:id="@+id/idIVcourse2"
-        android:layout_width="94dp"
-        android:layout_height="93dp"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
         android:layout_gravity="center"
         android:src="@mipmap/ic_launcher"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,22 +35,23 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="273dp"
-        android:layout_height="70dp"
+        android:layout_width="300sp"
+        android:layout_height="70sp"
         android:layout_centerHorizontal="true"
         android:text="Are you sure you want\n          to go back?"
         android:textColor="@color/black"
         android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@+id/yes_confirmRegistration"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.948" />
 
     <Button
         android:id="@+id/no_confirmRegistration"
-        android:layout_width="287dp"
-        android:layout_height="63dp"
+        android:layout_width="300sp"
+        android:layout_height="60sp"
         android:backgroundTint="@color/button_color"
         android:text="no, I want to continue"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -62,8 +63,8 @@
 
     <Button
         android:id="@+id/yes_confirmRegistration"
-        android:layout_width="284dp"
-        android:layout_height="59dp"
+        android:layout_width="300sp"
+        android:layout_height="60sp"
         android:backgroundTint="@color/button_color"
         android:text="yes, return to the main page"
         app:layout_constraintBottom_toTopOf="@+id/no_confirmRegistration"
@@ -75,8 +76,8 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="383dp"
-        android:layout_height="78dp"
+        android:layout_width="375sp"
+        android:layout_height="75sp"
         android:text="@string/confirmBackText"
         android:textColor="@color/black"
         android:textSize="20sp"
