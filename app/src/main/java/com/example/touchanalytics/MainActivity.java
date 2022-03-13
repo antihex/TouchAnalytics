@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity{
     static File registeredUserSaveDir;
     File[] allRegisteredUserFiles;
     DisplayMetrics display;
+    boolean debug = true;
 
     @SuppressLint("UseCompatLoadingForDrawables")
     @Override
@@ -74,7 +75,8 @@ public class MainActivity extends AppCompatActivity{
 
         deleteUSRBtn.setOnClickListener(view -> {
 
-            //TODO Should delete a specified user or something
+            Intent deleteUsers = new Intent(view.getContext(), DeleteUser.class);
+            startActivity(deleteUsers);
         });
 
 
@@ -110,6 +112,28 @@ public class MainActivity extends AppCompatActivity{
            });
 
        }
+
+       if (debug){
+           Button btn = new Button(this);
+           btn.setTag("DEBUG");
+           btn.setText("DEBUG");
+           GridLayout.LayoutParams layoutParams = new GridLayout.LayoutParams();
+           layoutParams.height = btnSize;
+           layoutParams.width = btnSize;
+           layoutParams.setMargins(padding, padding, padding, padding);
+           btn.setBackground(getResources().getDrawable(R.drawable.round_button3));
+           btn.setLayoutParams(layoutParams);
+           gridLayout.addView(btn);
+
+           btn.setOnClickListener(view -> {
+               Intent debugger = new Intent(view.getContext(), Debug.class);
+               startActivity(debugger);
+           });
+        }
+
+
+
+
     }
 
     public static File[] CheckForRegisteredUsers(){

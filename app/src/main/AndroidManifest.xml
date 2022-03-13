@@ -23,7 +23,8 @@
         <activity android:name=".TestSwipe"></activity>
         <activity android:name=".IntruderPage"></activity>
         <activity android:name=".TrueUserPage"></activity>
-
+        <activity android:name=".DeleteUser"></activity>
+        <activity android:name=".Debug"></activity>
     </application>
 
 </manifest>

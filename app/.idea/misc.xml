@@ -5,11 +5,14 @@
       <map>
         <entry key="..\:/Users/zmcon/AndroidStudioProjects/TouchAnalytics/app/src/main/res/drawable/gradient_drawable.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/zmcon/AndroidStudioProjects/TouchAnalytics/app/src/main/res/drawable/round_button.xml" value="0.2869791666666667" />
+        <entry key="..\:/Users/zmcon/AndroidStudioProjects/TouchAnalytics/app/src/main/res/drawable/round_button2.xml" value="0.31614583333333335" />
+        <entry key="..\:/Users/zmcon/AndroidStudioProjects/TouchAnalytics/app/src/main/res/drawable/round_button3.xml" value="0.31614583333333335" />
         <entry key="..\:/Users/zmcon/AndroidStudioProjects/TouchAnalytics/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/Users/zmcon/AndroidStudioProjects/TouchAnalytics/app/src/main/res/layout/calibration.xml" value="0.1734375" />
         <entry key="..\:/Users/zmcon/AndroidStudioProjects/TouchAnalytics/app/src/main/res/layout/card_item.xml" value="0.1734375" />
         <entry key="..\:/Users/zmcon/AndroidStudioProjects/TouchAnalytics/app/src/main/res/layout/confirm_back.xml" value="0.1734375" />
         <entry key="..\:/Users/zmcon/AndroidStudioProjects/TouchAnalytics/app/src/main/res/layout/confirm_registration.xml" value="0.1734375" />
+        <entry key="..\:/Users/zmcon/AndroidStudioProjects/TouchAnalytics/app/src/main/res/layout/debug_page.xml" value="0.3" />
         <entry key="..\:/Users/zmcon/AndroidStudioProjects/TouchAnalytics/app/src/main/res/layout/delete_user.xml" value="0.3104166666666667" />
         <entry key="..\:/Users/zmcon/AndroidStudioProjects/TouchAnalytics/app/src/main/res/layout/failure_page.xml" value="0.2977777777777778" />
         <entry key="..\:/Users/zmcon/AndroidStudioProjects/TouchAnalytics/app/src/main/res/layout/true_user.xml" value="0.17708333333333334" />
