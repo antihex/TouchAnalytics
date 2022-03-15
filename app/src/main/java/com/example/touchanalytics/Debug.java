@@ -1,11 +1,8 @@
 package com.example.touchanalytics;
 
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
-import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,48 +17,28 @@ public class Debug extends AppCompatActivity {
             startActivity(goToMain);
         });
 
-        Button imageBtn = findViewById(R.id.testImages);
-        imageBtn.setOnClickListener(view -> {
-            setContentView(R.layout.calibration);
-            ImageView imgView;
-            imgView = findViewById(R.id.calibrationImgView);
-            char animalChar;
+        //Button imageBtn = findViewById(R.id.testImages);    //Image Button
+        //imageBtn.setOnClickListener(view -> {
+        //    Intent debugImages = new Intent(view.getContext(), CollectSwipe.class);
+        //    startActivity(debugImages);
+        //});
 
-            for( int i = 0; i < 4; i++ ){
-                if (i == 0)
-                {
-                    animalChar = 'c';
-                    //animalStr = "cats";
-                }
-                else if (i == 1)
-                {
-                    animalChar = 'd';
-                    //animalStr = "dogs";
-                }
-                else if (i == 2)
-                {
-                    animalChar = 'b';
-                }
-                else
-                {
-                    animalChar = 'h';
-                }
-                for (int j = 0; j < 20; j++) {
-                    String pathName = animalChar + "" + j;
-                    Resources resources = this.getResources();
-                    int id = resources.getIdentifier(pathName,"drawable", this.getPackageName());
+        Button susBtn = findViewById(R.id.testImposter);    //Intruder Button
+        susBtn.setOnClickListener(view -> {
+            Intent debugImposter = new Intent(view.getContext(), IntruderPage.class);
+            startActivity(debugImposter);
+        });
 
-                try {
-                    imgView.setImageDrawable(resources.getDrawable(id, this.getTheme()));
-                }
-                catch(Exception e){
-                    Log.d("", pathName);
-                    }
-                }
+        Button trueUserBtn = findViewById(R.id.testTrueUser);    //True User Button
+        trueUserBtn.setOnClickListener(view -> {
+            Intent debugTrueUser = new Intent(view.getContext(), TrueUserPage.class);
+            startActivity(debugTrueUser);
+        });
 
-            }
-
-
+        Button caliBtn = findViewById(R.id.testCalibrationPage);    //Cali Button
+        caliBtn.setOnClickListener(view -> {
+            Intent debugCali = new Intent(view.getContext(), CalibrateUser.class);
+            startActivity(debugCali);
         });
 
 

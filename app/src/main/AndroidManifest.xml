@@ -25,6 +25,7 @@
         <activity android:name=".TrueUserPage"></activity>
         <activity android:name=".DeleteUser"></activity>
         <activity android:name=".Debug"></activity>
+        <activity android:name=".DebugImages"></activity>
     </application>
 
 </manifest>

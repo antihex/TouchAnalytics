@@ -6,15 +6,48 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/testImages"
+        android:id="@+id/testCalibrationPage"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/round_button"
+        android:text="Cal Page"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/testTrueUser" />
+
+    <Button
+        android:id="@+id/testTrueUser"
         android:layout_width="100sp"
         android:layout_height="100sp"
         android:layout_marginStart="20sp"
         android:layout_marginTop="20sp"
         android:background="@drawable/round_button"
-        android:text="Images"
+        android:text="True User"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/testImages"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:background="@drawable/round_button"
+        android:text="Images"
+        app:layout_constraintEnd_toStartOf="@+id/testImposter"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/testTrueUser"
+        app:layout_constraintTop_toTopOf="@+id/testTrueUser" />
+
+    <Button
+        android:id="@+id/testImposter"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:background="@drawable/round_button"
+        android:text="sus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/testImages"
+        app:layout_constraintTop_toTopOf="@+id/testImages" />
 
     <Button
         android:id="@+id/backToMainBtn2"
